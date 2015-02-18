@@ -1,6 +1,6 @@
 # links app
 
-
+Just for fun
 
 ## Getting Started
 
