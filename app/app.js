@@ -3,41 +3,18 @@
 // Declare app level module which depends on views, and components
 angular.module('linksprivate', [
     'ngRoute',
-    'myApp.view1',
-    'myApp.view2',
-    'myApp.version'
+    'smart-table'
 ]).
 
     config(['$routeProvider', function ($routeProvider) {
         $routeProvider.otherwise({redirectTo: '/view1'});
     }]).
 
-    controller('LinkCtrl', function ($scope, ngTableParams) {
-        var data = [{name: "Moroni", url: 50},
-            {name: "Tiancum", age: 43},
-            {name: "Jacob", age: 27},
-            {name: "Nephi", age: 29},
-            {name: "Enos", age: 34},
-            {name: "Tiancum", age: 43},
-            {name: "Jacob", age: 27},
-            {name: "Nephi", age: 29},
-            {name: "Enos", age: 34},
-            {name: "Tiancum", age: 43},
-            {name: "Jacob", age: 27},
-            {name: "Nephi", age: 29},
-            {name: "Enos", age: 34},
-            {name: "Tiancum", age: 43},
-            {name: "Jacob", age: 27},
-            {name: "Nephi", age: 29},
-            {name: "Enos", age: 34}];
+    controller('basicsCtrl', ['$scope', function (scope) {
+        scope.rowCollection = [
+            {firstName: 'Laurent', lastName: 'Renard', birthDate: new Date('1987-05-21'), balance: 102, email: 'whatever@gmail.com'},
+            {firstName: 'Blandine', lastName: 'Faivre', birthDate: new Date('1987-04-25'), balance: -2323.22, email: 'oufblandou@gmail.com'},
+            {firstName: 'Francoise', lastName: 'Frere', birthDate: new Date('1955-08-27'), balance: 42343, email: 'raymondef@gmail.com'}
+        ];
+    }]);
 
-        $scope.tableParams = new ngTableParams({
-            page: 1,            // show first page
-            count: 10           // count per page
-        }, {
-            total: data.length, // length of data
-            getData: function ($defer, params) {
-                $defer.resolve(data.slice((params.page() - 1) * params.count(), params.page() * params.count()));
-            }
-        });
-    });
