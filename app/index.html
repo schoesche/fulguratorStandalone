@@ -33,18 +33,20 @@
     <table st-table="rowCollection" class="table table-striped">
         <thead>
         <tr>
+            <!--
+            <th>
+                <input st-search="'tag'" placeholder="Suche nach <tag>" class="input-sm form-control" type="search"/>
+            </th>
+            -->
+            <th colspan="3">
+                <input st-search placeholder="Die globale Suche" class="input-sm form-control" type="search"/>
+            </th>
+        </tr>
+        <tr>
             <th st-sort="name">Name</th>
             <th st-sort="tag">Tag</th>
             <th st-sort="link">Link</th>
 
-        </tr>
-        <tr>
-            <th>
-                <input st-search="'tag'" placeholder="Suche nach <tag>" class="input-sm form-control" type="search"/>
-            </th>
-            <th colspan="3">
-                <input st-search placeholder="Die globale Suche" class="input-sm form-control" type="search"/>
-            </th>
         </tr>
         </thead>
         <tbody>

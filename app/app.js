@@ -10,7 +10,7 @@ angular.module('linksprivate', [
         //$routeProvider.otherwise({redirectTo: '/view1'});
     }]).
 
-    controller('LinksCtrl', ['$scope', '$filter', function (scope, filter) {
+    controller('LinksCtrl', ['$scope', '$filter', '$http', function (scope, filter, http) {
         scope.rowCollection = [
             {name: 'RedNet', tag: 'rednet mobiliar', link: 'https://rednet.mobi.mobicorp.ch/ssp_ds/'},
             {name: 'RedNet1', tag: 'rednet1 mobiliar', link: 'https://rednet.mobi.mobicorp.ch/ssp_ds/'},
@@ -27,6 +27,13 @@ angular.module('linksprivate', [
         /*scope.predicates = ['firstName', 'lastName', 'birthDate', 'balance', 'email'];*/
         scope.predicates = ['name', 'tag', 'link'];
         scope.selectedPredicate = scope.predicates[0];
+
+        var loadLinkFile = function() {
+            http.get('links.json')
+                .then(function(res){
+                    $scope.rowCollection = res.data;
+                });
+        }
     }]);
 
 
