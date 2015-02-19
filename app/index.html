@@ -51,9 +51,11 @@
         </thead>
         <tbody>
         <tr ng-repeat="row in rowCollection">
-            <td>{{row.name | uppercase}}</td>
+            <td><a ng-href="{{row.link}}">{{row.name | uppercase}}</a></td>
             <td>{{row.tag | uppercase}}</td>
             <td>{{row.link | uppercase}}</td>
+
+            <a ng-href="mailto:{{row.email}}">email</a></td>
 
         <!--    <td>{{row.firstName | uppercase}}</td>
             <td>{{row.lastName}}</td>
