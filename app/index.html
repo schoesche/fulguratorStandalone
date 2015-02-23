@@ -30,13 +30,16 @@
         <label for="predicate">selected predicate:</label>
         <select class="form-control" id="predicate" ng-model="selectedPredicate" ng-options="predicate for predicate in predicates"></select>
     </form>-->
-    <table st-table="rowCollection" class="table table-striped">
-        <thead>
+
+    <input ng-model="searchText" placeholder="Die globale Suche" class="input-sm form-control" type="search"/>
+
+    <table ng-class="fullLinkTable">
         <tr>
-            <th colspan="3">
-                <input ng-model="searchText" placeholder="Die globale Suche" class="input-sm form-control" type="search"/>
-            </th>
-        </tr>
+            <td>
+
+    <table ng-class="linkTable linkTable1" st-table="rowCollection" class="table table-striped">
+        <thead>
+
         <tr>
             <th st-sort="name">Name</th>
         <!--    <th st-sort="tag">Tag</th>-->
@@ -52,6 +55,35 @@
 
         </tr>
         </tbody>
+    </table>
+
+            </td>
+                <td>
+
+
+    <table ng-class="linkTable linkTable2" st-table="rowCollection" class="table table-striped">
+        <thead>
+
+        <tr>
+            <th st-sort="name">Name</th>
+            <!--    <th st-sort="tag">Tag</th>-->
+            <!--    <th st-sort="link">Link</th>-->
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="row in rowCollection | filter:searchText">
+            <td><a ng-href="{{row.link}}">{{row.name | uppercase}}</a></td>
+            <!--     <td>{{row.tag | uppercase}}</td>-->
+            <!--     <td>{{row.link | uppercase}}</td>-->
+
+
+        </tr>
+        </tbody>
+    </table>
+
+
+                </td>
+        </tr>
     </table>
 
 </div>

@@ -3,6 +3,23 @@
 body {
   padding: 10px !important;
 }
+
+.fullLinkTable {
+  width: 100%;
+}
+
+.linkTable {
+  width: 25%;
+}
+
+.linkTable1 {
+
+}
+
+.linkTable2 {
+
+}
+
 /*
 .menu {
   list-style: none;
