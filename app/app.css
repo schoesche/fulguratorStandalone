@@ -4,6 +4,15 @@ body {
   padding: 10px !important;
 }
 
+.searchfield {
+  margin-bottom: 10px;
+}
+
+.tableTitle {
+  color: #FFFFFF;
+  background-color: #FF0000;
+}
+
 /*
 .linkTables {
   width: 100%;
@@ -27,6 +36,7 @@ body {
 
 .linkTable-4 {
   width: 100%;
+  display: block;
 }
 */
 
