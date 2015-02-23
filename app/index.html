@@ -8,7 +8,7 @@
 
     <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
-    <link rel="stylesheet" href="bower_components/ng-table/dist/ng-table.css">
+    <!--  <link rel="stylesheet" href="bower_components/ng-table/dist/ng-table.css">-->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 
     <link rel="stylesheet" href="app.css">
@@ -26,65 +26,25 @@
 
 <div ng-controller="LinksCtrl">
 
- <!--   <form>
-        <label for="predicate">selected predicate:</label>
-        <select class="form-control" id="predicate" ng-model="selectedPredicate" ng-options="predicate for predicate in predicates"></select>
-    </form>-->
-
     <input ng-model="searchText" placeholder="Die globale Suche" class="input-sm form-control" type="search"/>
 
-    <table ng-class="fullLinkTable">
-        <tr>
-            <td>
+    <div ng-repeat="group in rowCollection" ng-class="linkTables">
 
-    <table ng-class="linkTable linkTable1" st-table="rowCollection" class="table table-striped">
-        <thead>
+        <table ng-class="['linkTable-' + $index]" st-table="rowCollection" class="table table-striped">
+            <thead>
+            <tr>
+                <th st-sort="name">{{group.groupname}}</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr ng-repeat="row in group.grouplinks | filter:searchText">
+                <td><a ng-href="{{row.link}}">{{row.name | uppercase}}</a></td>
+            </tr>
+            </tbody>
+        </table>
 
-        <tr>
-            <th st-sort="name">Name</th>
-        <!--    <th st-sort="tag">Tag</th>-->
-        <!--    <th st-sort="link">Link</th>-->
-        </tr>
-        </thead>
-        <tbody>
-        <tr ng-repeat="row in rowCollectionBetrieb | filter:searchText">
-            <td><a ng-href="{{row.link}}">{{row.name | uppercase}}</a></td>
-       <!--     <td>{{row.tag | uppercase}}</td>-->
-       <!--     <td>{{row.link | uppercase}}</td>-->
+    </div>
 
-
-        </tr>
-        </tbody>
-    </table>
-
-            </td>
-                <td>
-
-
-    <table ng-class="linkTable linkTable2" st-table="rowCollection" class="table table-striped">
-        <thead>
-
-        <tr>
-            <th st-sort="name">Name</th>
-            <!--    <th st-sort="tag">Tag</th>-->
-            <!--    <th st-sort="link">Link</th>-->
-        </tr>
-        </thead>
-        <tbody>
-        <tr ng-repeat="row in rowCollectionAllgemein | filter:searchText">
-            <td><a ng-href="{{row.link}}">{{row.name | uppercase}}</a></td>
-            <!--     <td>{{row.tag | uppercase}}</td>-->
-            <!--     <td>{{row.link | uppercase}}</td>-->
-
-
-        </tr>
-        </tbody>
-    </table>
-
-
-                </td>
-        </tr>
-    </table>
 
 </div>
 </body>

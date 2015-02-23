@@ -4,20 +4,23 @@ body {
   padding: 10px !important;
 }
 
-.fullLinkTable {
+.linkTables {
   width: 100%;
+
 }
 
-.linkTable {
+.linkTable-0 {
+  width: 25%;
+  float: left;
+}
+
+.linkTable-1 {
   width: 25%;
 }
 
-.linkTable1 {
-
-}
-
-.linkTable2 {
-
+.linkTable-2 {
+  width: 25%;
+  float: right;
 }
 
 /*

@@ -21,8 +21,9 @@ angular.module('linksprivate', [
         var loadLinkFile = function() {
             http.get('links.json')
                 .then(function(res){
-                    scope.rowCollectionBetrieb = res.data[0].grouplinks;
-                    scope.rowCollectionAllgemein = res.data[1].grouplinks;
+
+                        scope.rowCollection = res.data;
+console.log(scope.rowCollection);
                 });
         }
 
