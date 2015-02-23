@@ -47,7 +47,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="row in rowCollection | filter:searchText">
+        <tr ng-repeat="row in rowCollectionBetrieb | filter:searchText">
             <td><a ng-href="{{row.link}}">{{row.name | uppercase}}</a></td>
        <!--     <td>{{row.tag | uppercase}}</td>-->
        <!--     <td>{{row.link | uppercase}}</td>-->
@@ -71,7 +71,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="row in rowCollection | filter:searchText">
+        <tr ng-repeat="row in rowCollectionAllgemein | filter:searchText">
             <td><a ng-href="{{row.link}}">{{row.name | uppercase}}</a></td>
             <!--     <td>{{row.tag | uppercase}}</td>-->
             <!--     <td>{{row.link | uppercase}}</td>-->
