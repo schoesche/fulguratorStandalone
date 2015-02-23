@@ -8,7 +8,6 @@
 
     <link rel="stylesheet" href="bower_components/html5-boilerplate/css/normalize.css">
     <link rel="stylesheet" href="bower_components/html5-boilerplate/css/main.css">
-    <!--  <link rel="stylesheet" href="bower_components/ng-table/dist/ng-table.css">-->
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
 
     <link rel="stylesheet" href="app.css">
@@ -28,21 +27,23 @@
 
     <input ng-model="searchText" placeholder="Die globale Suche" class="input-sm form-control" type="search"/>
 
-    <div ng-repeat="group in rowCollection" ng-class="linkTables">
+    <div class="row">
+        <div ng-repeat="group in rowCollection" class="col-md-2">
 
-        <table ng-class="['linkTable-' + $index]" st-table="rowCollection" class="table table-striped">
-            <thead>
-            <tr>
-                <th st-sort="name">{{group.groupname}}</th>
-            </tr>
-            </thead>
-            <tbody>
-            <tr ng-repeat="row in group.grouplinks | filter:searchText">
-                <td><a ng-href="{{row.link}}">{{row.name | uppercase}}</a></td>
-            </tr>
-            </tbody>
-        </table>
+            <table ng-class="['linkTable-' + $index]" st-table="rowCollection" class="table table-striped">
+                <thead>
+                <tr>
+                    <th st-sort="name">{{group.groupname}}</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="row in group.grouplinks | filter:searchText">
+                    <td><a ng-href="{{row.link}}">{{row.name | uppercase}}</a></td>
+                </tr>
+                </tbody>
+            </table>
 
+        </div>
     </div>
 
 

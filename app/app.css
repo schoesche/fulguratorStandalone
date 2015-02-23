@@ -4,52 +4,30 @@ body {
   padding: 10px !important;
 }
 
+/*
 .linkTables {
   width: 100%;
-
 }
 
 .linkTable-0 {
-  width: 25%;
-  float: left;
+  width: 100%;
 }
 
 .linkTable-1 {
-  width: 25%;
+  width: 100%;
 }
 
 .linkTable-2 {
-  width: 25%;
-  float: right;
+  width: 100%;
 }
 
-/*
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+.linkTable-3 {
+  width: 100%;
 }
 
-.menu:before {
-  content: "[";
-}
-
-.menu:after {
-  content: "]";
-}
-
-.menu > li {
-  display: inline;
-}
-
-.menu > li:before {
-  content: "|";
-  padding-right: 0.3em;
-}
-
-.menu > li:nth-child(1):before {
-  content: "";
-  padding: 0;
+.linkTable-4 {
+  width: 100%;
 }
 */
+
+
