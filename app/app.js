@@ -6,7 +6,7 @@ angular.module('fulgurator', [
 ]).
 
     config(['$routeProvider', function ($routeProvider) {
-        //$routeProvider.otherwise({redirectTo: '/view1'});
+
     }]).
 
     controller('LinksCtrl', ['$scope', '$filter', '$http', function (scope, filter, http) {
@@ -16,7 +16,7 @@ angular.module('fulgurator', [
                 .then(function(res){
 
                         scope.rowCollection = res.data;
-console.log(scope.rowCollection);
+
                 });
         }
 
