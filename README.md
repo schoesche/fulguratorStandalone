@@ -1,6 +1,7 @@
-# links app
+# Fulgurator app
 
-Just for fun
+Just for fun.
+It's possible to managing links.
 
 ## Intro
 
