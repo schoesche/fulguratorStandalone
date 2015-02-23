@@ -67,6 +67,10 @@ Now browse to the app at `http://localhost:8000/fulgurator/app/index.html`.
 
 Links are saved in the links.json file.
 
+The groupname is the table title.
+The name is visible.
+The search function includes name , tag and link.
+
 ```
 [
   {
