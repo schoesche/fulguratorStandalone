@@ -34,7 +34,7 @@
         <thead>
         <tr>
             <th colspan="3">
-                <input st-search placeholder="Die globale Suche" class="input-sm form-control" type="search"/>
+                <input ng-model="searchText" placeholder="Die globale Suche" class="input-sm form-control" type="search"/>
             </th>
         </tr>
         <tr>
@@ -44,7 +44,7 @@
         </tr>
         </thead>
         <tbody>
-        <tr ng-repeat="row in rowCollection">
+        <tr ng-repeat="row in rowCollection | filter:searchText">
             <td><a ng-href="{{row.link}}">{{row.name | uppercase}}</a></td>
             <td>{{row.tag | uppercase}}</td>
             <td>{{row.link | uppercase}}</td>
