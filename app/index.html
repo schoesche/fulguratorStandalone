@@ -39,17 +39,16 @@
         </tr>
         <tr>
             <th st-sort="name">Name</th>
-            <th st-sort="tag">Tag</th>
-            <th st-sort="link">Link</th>
+        <!--    <th st-sort="tag">Tag</th>-->
+        <!--    <th st-sort="link">Link</th>-->
         </tr>
         </thead>
         <tbody>
         <tr ng-repeat="row in rowCollection | filter:searchText">
             <td><a ng-href="{{row.link}}">{{row.name | uppercase}}</a></td>
-            <td>{{row.tag | uppercase}}</td>
-            <td>{{row.link | uppercase}}</td>
+       <!--     <td>{{row.tag | uppercase}}</td>-->
+       <!--     <td>{{row.link | uppercase}}</td>-->
 
-            <a ng-href="mailto:{{row.email}}">email</a></td>
 
         </tr>
         </tbody>
