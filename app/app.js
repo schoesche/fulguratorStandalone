@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('linksprivate', [
+angular.module('fulgurator', [
     'ngRoute',
     'smart-table'
 ]).
