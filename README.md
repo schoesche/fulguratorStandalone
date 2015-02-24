@@ -12,6 +12,30 @@ This Project is based on angular-seed.
 
 To get you started you can simply clone the fulgurator repository and install the dependencies:
 
+### Fast Installation
+
+Go to your workspace root
+```
+git clone https://github.com/schoesche/fulgurator.git
+```
+
+install all libraries
+```
+cd fulgurator
+npm install
+```
+
+you find the index.html file
+```
+cd app
+```
+
+you find the links.js file
+```
+fulgurator/app/data/links.js
+```
+
+
 ### Prerequisites
 
 You need git to clone the fulgurator repository. You can get git from
