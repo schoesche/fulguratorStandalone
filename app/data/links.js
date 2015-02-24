@@ -3,11 +3,10 @@
 
 angular.module('fulgurator.linksModule', [])
 
-    .service('linksService', function () {
-        this.users = ['John', 'James', 'Jake'];
 
 
-        this.allLinks = function () {
+    .value('linksModule', {
+        allLinks: function() {
 
             var rowCollection = [{
                 "groupname": "Tools",
@@ -41,6 +40,7 @@ angular.module('fulgurator.linksModule', [])
                 }];
 
             return rowCollection;
-        };
 
+        }
     });
+

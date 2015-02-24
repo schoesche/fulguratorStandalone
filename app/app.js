@@ -10,28 +10,19 @@ angular.module('fulgurator', [
 
     }]).
 
-    controller('LinksCtrl', ['$scope', '$filter', '$http', function (scope, filter, http) {
+    controller('LinksCtrl', ['$scope', '$filter', '$http', 'linksModule', function (scope, filter, http, linksModule) {
 
         var loadLinkFile = function() {
             /*http.get('links.json')*/
-
             /*    .then(function(res){*/
-
                         /*scope.rowCollection = res.data;*/
-                    scope.rowCollection = [{
-                        "groupname": "Tools",
-                        "grouplinks": [
-                            {
-                                "name": "Lifecycle Management",
-                                "tag": "quality center lifecycle management applikation application",
-                                "link": "  https://pzone2.mobi.ch/qcbin/start_a.jsp"
-                            }
-                        ]
-                    }];
+            /*});*/
+
+
+            scope.rowCollection =  linksModule.allLinks();
 
 
 
-                /*});*/
         }
 
         loadLinkFile();
