@@ -1,7 +1,8 @@
 # Fulgurator app
 
 Just for fun.
-It's possible to managing links.
+
+It's a link management tool.
 
 ## Intro
 
