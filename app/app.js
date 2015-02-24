@@ -13,10 +13,12 @@ angular.module('fulgurator', [
     controller('LinksCtrl', ['$scope', '$filter', '$http', 'linksModule', function (scope, filter, http, linksModule) {
 
         var loadLinkFile = function() {
-            /*http.get('links.json')*/
-            /*    .then(function(res){*/
-                        /*scope.rowCollection = res.data;*/
-            /*});*/
+            /*
+            http.get('links.json')
+                .then(function(res){
+                        scope.rowCollection = res.data;
+            });
+            */
 
 
             scope.rowCollection =  linksModule.allLinks();
