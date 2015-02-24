@@ -1,9 +1,9 @@
 {
-  "name": "linksprivate",
+  "name": "fulgurator",
   "private": true,
   "version": "0.0.1",
-  "description": "A starter project for AngularJS",
-  "repository": "https://github.com/schoesche/linksprivate",
+  "description": "For Managing WebLinks",
+  "repository": "https://github.com/schoesche/fulgurator",
   "license": "MIT",
   "devDependencies": {
     "karma": "~0.10",
