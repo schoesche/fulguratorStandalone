@@ -42,13 +42,13 @@ module.exports.config = {
         // application file stuff
         app : {
             tpls : [
-                'src/app/**/*.tpl.html'
+                'app/**/*.tpl.html'
             ],
             js : [
-                'src/app/**/*.js'
+                'app/**/*.js'
             ],
             styles : [
-                'src/assets/css/*.css'
+                'assets/css/*.css'
             ]
         }
     }
