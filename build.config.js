@@ -44,6 +44,10 @@ module.exports.config = {
             tpls : [
                 'app/**/*.tpl.html'
             ],
+            sites : [
+                'app/**/*.html',
+                'index.html'
+            ],
             js : [
                 'app/**/*.js',
                 'app.js'
