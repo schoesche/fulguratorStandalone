@@ -2,11 +2,10 @@
 
 angular.module('fulgurator', [
     'ngRoute',
-    'smart-table',
     'fulgurator.linksModule'
 ]).
 
-    config(['$routeProvider', function ($routeProvider) {
+   /* config(['$routeProvider', function ($routeProvider) {
         $routeProvider.
             when('/',
             {
@@ -18,13 +17,8 @@ angular.module('fulgurator', [
                 templateUrl: 'components/settings/settings.html',
                 controller: 'LinksSettingsCtrl'
             }).
-           /*when('/page-3',
-            {
-                templateUrl: 'partials/partial-For-routes-3.html',
-                controller: appCtrl
-            }).*/
             otherwise({redirectTo: ("/")})
-    }]).
+    }]).*/
 
     controller('LinksCtrl', ['$scope', '$filter', '$http', 'linksModule', function (scope, filter, http, linksModule) {
 
