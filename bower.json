@@ -1,8 +1,8 @@
 {
-  "name": "linksprivate",
-  "description": "A starter project for AngularJS",
+  "name": "fulguratorStandalone",
+  "description": "A starter project for AngularJS to manage links",
   "version": "0.0.1",
-  "homepage": "https://github.com/schoesche/linksprivate",
+  "homepage": "https://github.com/schoesche/fulguratorStandalone",
   "license": "MIT",
   "private": true,
   "dependencies": {
